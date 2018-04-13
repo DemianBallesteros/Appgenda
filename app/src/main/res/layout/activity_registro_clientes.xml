@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6E9"
+    tools:context="com.example.home.appgenda.RegistroClientes">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/persona" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="95dp"
+
+            android:text="Registro"
+            android:textColor="#F2855E"
+            android:textSize="28dp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="52dp"
+            android:layout_height="89dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="onClick"
+            android:src="@drawable/menupfondo"
+
+            />
+
+
+
+<EditText
+    android:id="@+id/campoId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Identificación"
+    android:layout_marginBottom="15dp"
+    />
+
+
+    <EditText
+        android:id="@+id/campoNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:textColor="#283149"
+        android:layout_marginBottom="15dp"/>
+
+
+    <EditText
+        android:id="@+id/campoTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Teléfono"
+        android:textColor="#283149"
+        android:layout_marginBottom="15dp"/>
+
+
+    <EditText
+        android:id="@+id/campoInformacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#283149"
+        android:hint="Información"
+        android:layout_marginBottom="25dp"></EditText>
+
+
+
+    <Button
+        android:id="@+id/btnRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="Registrar Cliente"
+        android:background="#DBEDF3"
+        android:textColor="#283149"
+        android:textSize="21dp">
+
+    </Button>
+
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

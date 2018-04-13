@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.home.appgenda.MainActivity">
+
+    <Button
+        android:id="@+id/buscar"
+        android:layout_width="234dp"
+        android:layout_height="69dp"
+        android:background="#283149"
+        android:text="Buscar cliente"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <Button
+        android:id="@+id/editar"
+        android:layout_width="234dp"
+        android:layout_height="69dp"
+        android:background="#283149"
+        android:text="Editar información"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="286dp" />
+
+    <Button
+        android:id="@+id/crear"
+        android:layout_width="234dp"
+        android:layout_height="69dp"
+        android:background="#283149"
+        android:text="Crear cliente"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="366dp" />
+
+    <Button
+        android:id="@+id/salir"
+        android:layout_width="234dp"
+        android:layout_height="69dp"
+        android:background="#283149"
+        android:text="Salir"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="443dp" />
+
+</android.support.constraint.ConstraintLayout>
