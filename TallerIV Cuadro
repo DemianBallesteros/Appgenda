@@ -1,0 +1,604 @@
+   PShape v;
+   PShape v1;
+   PShape v2;
+   PShape v3;
+   PShape v4;
+   PShape v5;
+   PShape v1s;
+   PShape r;
+   PShape a;
+   PShape ao;
+   PShape as;
+   PShape cu;
+   PShape lapz;
+   PShape dr;
+   PShape n;
+   PShape g;
+   PShape ca;
+   
+  void setup ()
+  {
+   size(537,731) ; 
+   background(20,19,17); 
+  
+   
+   
+    //forma izquierda arriba
+    
+    v = createShape();
+    v.beginShape();
+    v.fill(85, 144, 90);
+    v.noStroke();
+    v.vertex(74, 74);
+    v.vertex(8, 157);
+    v.vertex(173, 288);
+    v.vertex(264, 416);
+    v.vertex(130, 40);
+    v.vertex(84, 81);
+    v.endShape(CLOSE);
+   
+   // figura roja izq
+   
+    r = createShape();
+    r.beginShape();
+    r.fill(145, 35, 22);
+    r.noStroke();
+    r.vertex(0, 317);
+    r.vertex(0, 526);
+    r.vertex(10, 540);
+    r.vertex(60, 543);
+    r.vertex(91, 523);
+    r.vertex(80, 358);
+    r.vertex(68, 371);
+    r.vertex(41, 385);
+    r.vertex(31, 361);
+    r.vertex(49, 350);
+    r.vertex(58, 333);
+    r.endShape(CLOSE);
+    
+    //figura azul abajo
+    a = createShape();
+    a.beginShape();
+    a.fill(59,81,122);
+    a.noStroke();
+    a.vertex(90, 617);
+    a.vertex(537, 613);
+    a.vertex(537, 731);
+    a.vertex(392, 731);
+    a.vertex(348, 615);
+    a.vertex(105, 695);
+    a.vertex(116, 731);
+    a.vertex(94, 731);
+    a.endShape(CLOSE);
+    
+     //fondo azul oscuro derecja 
+     
+    ao = createShape();
+    ao.beginShape();
+    ao.fill(59,81,122);
+    ao.stroke(35,39,42);
+    ao.vertex(391, 200);
+    ao.vertex(509, 0);
+    ao.vertex(537, 0);
+    ao.vertex(539, 253);
+    ao.vertex(462, 306);
+    ao.endShape(CLOSE);
+   
+   
+    //forma izquierda saco
+    
+    v1 = createShape();
+    v1.beginShape();
+    v1.fill(46, 70, 36);
+    v1.noStroke();
+    v1.vertex(97, 615);
+    v1.vertex(208, 579);
+    v1.vertex(222, 580);
+    v1.vertex(249, 570);
+    v1.vertex(274, 548);
+    v1.vertex(282, 617);
+    v1.endShape(CLOSE);
+  
+  
+   //sombra izquierda saco
+    
+    v1s = createShape();
+    v1s.beginShape();
+    v1s.fill(32, 46, 29);
+    v1s.noStroke();
+    v1s.vertex(208, 579);
+    v1s.vertex(218, 590);
+    v1s.vertex(274, 555);
+    v1s.endShape(CLOSE);
+    
+    //figura azul abajo
+    as = createShape();
+    as.beginShape();
+    as.fill(78,101,142);
+    as.noStroke();
+    as.vertex(168, 476);
+    as.vertex(80, 358);
+    as.vertex(92, 342);
+    as.vertex(112, 349);
+    as.vertex(137, 382);
+    as.endShape(CLOSE);
+    
+    //saco der
+    
+    //forma izquierda arriba
+    
+    v2 = createShape();
+    v2.beginShape();
+    v2.fill(47, 79, 42);
+    v2.noStroke();
+    v2.vertex(420,613);
+    v2.vertex(414,508);
+    v2.vertex(537,533);
+    v2.vertex(537,613);
+    v2.endShape(CLOSE);
+    
+     //forma derecha cigar
+    
+    v3 = createShape();
+    v3.beginShape();
+    v3.fill(48, 95, 53);
+    v3.noStroke();
+    v3.vertex(465, 304);
+    v3.vertex(501, 418);
+    v3.vertex(395, 454);
+    v3.vertex(397, 429);
+    v3.vertex(414, 426);
+    v3.vertex(433, 420);
+    v3.vertex(446, 409);
+    v3.vertex(431, 397);
+    v3.vertex(421, 397);
+    v3.vertex(401, 403);
+    v3.vertex(394, 406);
+    v3.vertex(387, 376);
+    v3.vertex(383, 361);
+    v3.endShape(CLOSE);
+    
+    //forma derecha cigar
+    
+    v4 = createShape();
+    v4.beginShape();
+    v4.fill(55, 103, 61);
+    v4.noStroke();
+
+    v4.vertex(341, 271);
+    v4.vertex(336, 250);
+    v4.vertex(328, 230);
+    v4.vertex(314, 213);
+    v4.vertex(311, 184);
+    v4.vertex(327, 172);
+    v4.vertex(336, 157);
+    v4.vertex(342, 135);
+    v4.vertex(313, 127);
+    v4.vertex(310, 139);
+    v4.vertex(306, 11);
+    v4.vertex(368, 11);
+    v4.vertex(417, 154);
+    v4.vertex(342, 285);
+    
+    
+    v4.endShape(CLOSE);
+    
+    
+    
+    //forma verde en boca
+    
+    v5 = createShape();
+    v5.beginShape();
+    v5.fill(72, 111, 64);
+    v5.stroke(54,52,39);
+    v5.vertex(324, 475);
+    v5.vertex(297, 457);
+    v5.vertex(298, 451);
+    v5.vertex(303, 445);
+    v5.vertex(317, 448);
+    v5.vertex(348, 468);
+    v5.endShape(CLOSE);
+   
+    
+    
+    //forma cuello
+    
+    cu = createShape();
+    cu.beginShape();
+    cu.fill(185, 121, 77);
+    cu.noStroke();
+    cu.vertex(287,485);
+    cu.vertex(396,452);
+    cu.vertex(399,545);
+    cu.vertex(350,621);
+    cu.vertex(290,548);
+    cu.endShape(CLOSE);
+    
+     
+    lapz = createShape();
+    lapz.beginShape();
+    lapz.fill(180, 113, 71);
+    lapz.noStroke();
+    lapz.vertex(262, 527);
+    lapz.vertex(168, 476);
+    lapz.vertex(150, 414);
+    lapz.vertex(156, 408);
+    lapz.vertex(164, 406);
+    lapz.vertex(160, 395);
+    lapz.vertex(181, 399);
+    lapz.vertex(219, 442);
+    lapz.vertex(255, 466);
+    lapz.vertex(277, 475);
+    lapz.vertex(279, 516);
+    lapz.endShape(CLOSE);
+    
+    // boca dorada
+    
+    dr = createShape();
+    dr.beginShape();
+    dr.fill(168, 133, 65);
+    dr.noStroke();
+    dr.vertex(308, 479);
+    dr.vertex(275, 432);
+    dr.vertex(301, 416);
+    dr.vertex(340, 442);
+    dr.vertex(373, 439);
+    dr.vertex(359, 464);
+    dr.endShape(CLOSE);
+    
+    
+    //cara azul
+    
+    ca = createShape();
+    ca.beginShape();
+    ca.fill(93, 122, 164);
+    ca.noStroke();
+    ca.vertex(173, 63);
+    ca.vertex(233, 26);
+    ca.vertex(277, 194);
+    ca.vertex(310, 185);
+    ca.vertex(312, 189);
+    ca.vertex(313, 207);
+    ca.vertex(343, 293);
+    ca.vertex(319, 330);
+    ca.vertex(225, 221);
+    ca.vertex(244, 182);
+    ca.vertex(252, 162);
+    ca.vertex(249, 139);
+    ca.vertex(246, 130);
+    ca.vertex(233, 132);
+    ca.vertex(221, 138);
+    ca.vertex(220, 184);
+    
+    ca.endShape(CLOSE);
+    
+    //partes naranjas cara
+    
+    n = createShape();
+    n.beginShape();
+    n.fill(196, 103, 69);
+    n.noStroke();
+    n.vertex(293, 373);
+    n.vertex(325, 315);
+    n.vertex(264, 227);
+    n.vertex(244, 232);
+    n.vertex(255, 215);
+    n.vertex(236, 197);
+    n.vertex(204, 237);
+    n.vertex(207, 251);
+    n.vertex(348, 384);
+    n.vertex(325, 399);
+    n.vertex(297, 402);
+    n.vertex(293, 372);
+    n.endShape(CLOSE);
+    
+       //sombrero gris
+    
+    g = createShape();
+    g.beginShape();
+    g.fill(39, 36, 31);
+    g.noStroke();
+    g.vertex(196,222);
+    g.vertex(166,144);
+    g.vertex(211,175);
+    g.vertex(218,148);
+    g.vertex(217,136);
+    g.vertex(234,132);
+    g.vertex(232,162);
+    g.vertex(221,188);
+    g.vertex(196,222);
+    g.endShape(CLOSE);
+    
+  }//cierra void setup
+  
+  void draw()
+  {  
+   /* Guías
+    stroke(74,255,255); //guías
+    line(268.5, 0, 268.5, 731);
+    line(0, 365.5, 537,365.5);
+    line(134, 0, 134, 731);
+    line(404, 0, 404, 731);
+     line(0, 183.5, 537, 183.5);
+    line(0, 550, 537, 550 );
+   */ 
+   
+   // triangulo morado izq
+    noStroke();
+    fill(48,32,33);
+    triangle(0, 129, 117, 0, 0, 0);
+    
+  
+  
+   shape(v, 0, 0);
+    
+    //lineas en  sombrero verde
+    stroke(44,55,38); //linea negra
+    line(74, 74, 168, 148);
+    
+    stroke(70,109,64); //linea mitad
+    strokeWeight(1.1);
+    line(40, 115, 200, 245);
+    
+    //figura roja izquierda
+    
+    shape(r, 0, 0);
+    
+    // triangulo morado izq
+    noStroke();
+    fill(63,40,48);
+    triangle(92, 519, 163, 506, 86, 389);
+    
+    //cuello
+    shape(cu,0,0);
+    
+    //forma verde abajo izq
+    noStroke();
+    fill(64,110,74);
+    quad(0, 545, 0, 651, 90, 617, 60, 550);
+    
+    // triangulo azul izq pequeño
+    noStroke();
+    fill(59,81,122);
+    triangle(90, 617, 60, 550, 91, 527);
+    
+    //figura azul abajo
+    shape(a, 0,0);
+  
+    //mancha negra abajo
+    noStroke();
+    fill(37,36,34);
+    quad(256, 731, 258, 689,321, 710, 330, 731);
+    
+    //camisa  abajo
+    noStroke();
+    fill(199,198,178);
+    quad(330, 731, 295, 635, 348, 615 , 393, 731);
+    
+    
+     // triangulo izq camisa
+    stroke(73,66,60);
+    fill(229,222,203);
+    triangle(348, 615, 288, 544, 293, 615);
+    
+    // triangulo der camisa
+    stroke(73,66,60);
+    fill(229,222,203);
+    triangle(348, 615, 399, 539, 405, 615);
+    
+    //saco verde izq
+    noStroke();
+    fill(58,91,48);
+    quad(176, 528, 211, 575,90, 613, 91, 550);
+    
+    //saco verde sombra izq
+    shape(v1s, 0, 0);
+    
+    //saco verde grande izq
+    shape(v1, 0, 0);
+    
+    // triangulo izq pequeñ
+    noStroke();
+    fill(209,201,180);
+    triangle(224, 555, 168, 476, 262, 527);
+    
+    //forma azul saco izq
+    shape(as,0,0);
+    
+     //saco verde der
+    shape(v2, 0, 0);
+    
+     //punta lapiz
+    noStroke();
+    fill(119,82,66);
+    quad(137, 381, 153, 424,174, 413, 160, 395);
+    
+    // forma lapiz
+    shape(lapz, 0,0);
+    
+    // triangulo sombra lapiz
+    noStroke();
+    fill(115,62,44);
+    triangle(216, 441, 264, 483, 239, 469);
+    
+    //boca dorada izq
+    stroke(140,109,55);
+    fill(158,127,63);
+    quad(287, 489, 271, 436,275, 432, 308, 479);
+    
+    //boca dorada
+    shape(dr,0,0);
+    
+     // sombra sombrero  
+    noStroke();
+    fill(49,74,115);
+    quad(310, 195, 272,200,222, 8, 306, 11.5);
+    
+     //cara azuli
+    shape(ca,0,0);
+    
+    // triangulo verde boca
+    noStroke();
+    fill(82,111,63);
+    triangle(303, 416, 348, 384, 339, 440);
+    
+    
+     // triangulo naranja iz boca
+    noStroke();
+    fill(179,86,55);
+    triangle(265, 417, 209, 256, 285, 385);
+    
+    //boca cuadro verde peque
+    noStroke();
+    fill(105,147,81);
+    quad(275, 431, 266, 417,285, 386, 299, 415);
+    
+     //boca pequeña morado
+    noStroke();
+    fill(119,140,169);
+    quad(300, 418, 284, 387,294, 372, 327, 398);
+    
+    //boca naranja
+    shape(n,0,0);
+    
+     // dorado oscuro boca
+    noStroke();
+    fill(77,68,51);
+    quad(340, 441, 348, 385,373, 389, 390, 437);
+    
+    // triangulo morado derecha
+    noStroke();
+    fill(113,137,173);
+    triangle(359, 463, 384, 421, 395, 452);
+    
+     // cuadro verde nariz?
+    noStroke();
+    fill(89,126,74);
+    quad(311, 341, 325, 315,363, 373, 352, 381);
+    
+   // triangulo dorado derecha
+    noStroke();
+    fill(132,111,64);
+    triangle(349, 385, 367, 371, 373, 389);
+    
+    // cuadro dorado derecha
+    stroke(102,82,47);
+    fill(124,103,58);
+    quad(325, 315, 390, 199,461, 308, 363, 373);
+    
+    // triangulo morado derecha
+    noStroke();
+    fill(41,25,28);
+    triangle(417, 470, 523, 431, 528, 506);
+    
+    // triangulo morado derecha arriba
+    noStroke();
+    fill(52,27,30);
+    triangle(478, 296, 537, 256, 536.6, 424);
+    
+     // triangulo morado derecha más arriba
+    noStroke();
+    fill(55,22,29);
+    triangle(427, 141, 380, 6, 507, 1);
+    
+    //sombrero gris
+    shape(g,0,0);
+    
+    // cuadro sombrero  derecha
+    noStroke();
+    fill(68,92,136);
+    quad(294, 150, 247, 8,305, 10, 310, 141);
+    
+    // luz sombrero  izq
+    noStroke();
+    fill(124,151,181);
+    quad(132, 43, 192, 32,226, 157, 190, 212);
+    
+    
+    
+    //circulo izquierda arriba
+   noStroke();
+   fill(85,142,87);    
+   ellipse(184, 20, 114, 94);
+   
+     //sombrero gris
+    shape(g,0,0);
+    
+    //parte verde cigar
+    shape(v3,0,0);
+    
+    //sombrero gris
+    shape(g,0,0);
+    
+     //circulo cigarro
+   noStroke();
+   fill(63,80,108);    
+   ellipse(435, 408 , 19, 19);
+   
+   //fondo azul derecha
+    shape(ao,0,0);
+   
+   //sombrero gris
+    shape(v4,0,0);
+    
+    //ojo
+   stroke(59,59,61);
+    strokeWeight(4);
+   noFill();    
+   ellipse(286, 235 , 11, 11);
+   
+   //boca
+   stroke(59,59,61);
+    strokeWeight(4);
+   noFill();    
+   line(267, 226, 313, 212);
+   
+   //lineas
+   stroke(38,40,29);
+    strokeWeight(4);
+   noFill();    
+   line(463, 428, 490, 387);
+   
+   stroke(120,55,35);
+    strokeWeight(4);
+   noFill();    
+   line(298, 386, 312, 385);
+   
+   //linea dorada
+   stroke(186,171,128);
+   noFill();
+   arc(350, 388, 34, 34, 0, PI+QUARTER_PI, OPEN);
+   line(312, 337, 362, 376);
+   line(362, 376, 368, 388);
+   
+   //menton
+     stroke(97,50,32);
+   noFill();
+   arc(360, 480, 32, 24, 0, 4.5);
+   line(393, 453, 377, 480);
+
+//forma verde en boca
+    shape(v5,0,0);
+    
+ //lineas en forma verde
+    stroke(54,52,39);
+    strokeWeight(2.5);
+   noFill();    
+   //derecha
+   line(298, 448, 291, 443);
+   line(306, 445, 337, 412);
+   line(337, 412, 331, 435);
+   line(331, 435, 325, 429);
+   line(325, 429, 329, 428);
+   //izq
+   line(315, 446, 327, 408);
+   line(327, 408, 311, 419);
+   line(311, 419, 310, 420);
+   line(310, 420, 316, 424);
+   line(316, 424, 317, 418);
+  
+  curve(370, 238, 400, 254, 418, 274, 428, 287);
+  line(368, 239, 400, 253);
+   
+   
+  }//Cierre Draw
