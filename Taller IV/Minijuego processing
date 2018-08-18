@@ -1,0 +1,96 @@
+  import processing.sound.*;
+  SoundFile audio;
+  //imagenes
+  PImage inicio;
+  PImage globo;
+  PImage fondo;
+  PImage obstaculo;
+  int gamestate = 1;
+  int score = 0;
+  int highScore = 0;
+  int x = -200 ,y,vy = 0;
+  int[] wx = new int [2];
+  int[] wy = new int [2];
+  
+  
+  void setup() {
+  size (600,900);
+  inicio = loadImage("inicio.png");
+  globo = loadImage("globo.png");
+  fondo = loadImage("fondo.png");
+  obstaculo = loadImage("obstaculo.png");
+  //audio = new SoundFile(this,"audio.mp3");
+  }
+  
+  void draw () {
+    if(gamestate == 0 ) //iniciar menu principal
+    {
+     // audio.play();
+      imageMode(CORNER);
+      image(fondo,x,0);
+      image(fondo,x+fondo.width,0);
+      image (globo,50,y);
+      x -=6;
+      vy += 1;
+      y += vy;
+      if(x == -1800) x = 0;
+      for(int i = 0 ; i < 2; i++){
+      imageMode(CENTER); // Centrar flechas
+      
+      
+      //image(obstaculo, wx [i], wy [i] - (obstaculo.height/2+100)); //coordenadas obst
+      image(obstaculo, wx [i], wy [i] + (obstaculo.height/2+100));
+      if(wx [i] < -150 ){ // limite desaparece
+      wy[i] = (int) random(200,height-200);
+      wx[i] = width;
+      
+      }
+       if(wx[i] == width){ //incremento puntuación
+         score++;
+         
+         highScore = max(score, highScore);
+       }
+       if( y>850/*limite arriba*/ || y < -70/*limite abajo*/ || (height/2+wx [i])<25 /*&& abs (y-wy[i])>100*/){
+       gamestate = 1;
+       }
+       
+       //image(obstaculo, wx [i], wy [i] - (obstaculo.height/2+100)); //coordenadas obst
+       
+       
+       
+       /*if( y>height || y < 0 || (abs(width/2-wx [i])<25 && abs (y-wy[i])>100)){
+       gamestate = 1;//image(obstaculo, wx [i], wy [i] - (obstaculo.height/2+100)); //coordenadas obst
+       }
+       */
+       wx[i] -= 9; //velocidad flechas
+      }
+      
+     fill(255,255,255);
+      textSize(32);
+     text(""+score,width/2,70);
+    }    
+    else {
+      imageMode(CENTER);
+      image (inicio ,width/2,height/2);
+      fill(0);
+      textSize(30);
+      text("Mayor puntuación: "+highScore,150,630);
+      text("Puntuación: "+score,200,700);
+    }
+  
+  }// Cierra draw
+  void mousePressed () {
+    vy = -17;// gravedad
+    if(gamestate==1){
+    wx[0] = 600;
+    wy[0] = height/2;
+    wx[1] = 900;
+    wy[1] = 600;
+    x = 0; 
+    y = height/2;
+    gamestate = 0;
+    score = 0;
+    
+    
+    }
+    }
